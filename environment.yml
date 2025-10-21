@@ -1,0 +1,13 @@
+name: member-pipeline
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.13.5
+  - pandas=2.2.3
+  - numpy=2.2.5
+  - yaml=0.2.5
+  - jupyterlab=4.3.4
+  - jupyter=1.1.1
+  - ipykernel=6.29.5
+  - matplotlib=3.10.3
