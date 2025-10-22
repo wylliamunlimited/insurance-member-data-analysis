@@ -23,6 +23,9 @@ Put the database file inside the root directory. Make sure the name is `n1_data_
 Install all required Python packages by:
 ```pip install -r requirements.txt```
 
+### Install US Map
+Visit [https://www2.census.gov/geo/tiger/TIGER2020/ZCTA520/](Census) to install `tl_2020_us_zcta520.zip`. Unzip it and extract all file - place in root directory here.
+
 ### Notebook Usage
 I used **jupyterlab** for all `.ipynb` files. Simply do `jupyter lab` at root directory. 
 
