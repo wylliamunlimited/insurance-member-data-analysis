@@ -25,6 +25,9 @@ Put the database file inside the root directory. Make sure the name is `n1_data_
 Install all required Python packages by:
 ```pip install -r requirements.txt```
 
+### Install US Map
+Visit [https://www2.census.gov/geo/tiger/TIGER2020/ZCTA520/](Census) to install `tl_2020_us_zcta520.zip`. Unzip it and extract all file - place in root directory here.
+
 ### Notebook Usage
 I used **jupyterlab** for all `.ipynb` files. Simply do `jupyter lab` at root directory. 
 
@@ -63,3 +66,14 @@ I used **jupyterlab** for all `.ipynb` files. Simply do `jupyter lab` at root di
         * Extracted ratio of member under the 2 payer types
         * Extract gender ratio, eligibility status by time, age and geographic distribution
     * Computed score averages and maximums, and extracted member records according to those scores
+
+## Singular Data Pipeline --- `singular-ingestion.py`
+
+### Description
+`singular-ingestion.py` facilitates an one-time data processing pipeline - streamlining data from `n1_data_ops_challenge.db` to build a new table `std_member_info` that includes all roster data. Specifically, the script reads through all tables whose names start with `roster_`, validates and parses the data, and ultimately aggregates them in order to write into `std_member_info` in `n1_data_ops_challenge.db`. 
+
+### Running it
+```
+python singular-ingestion.py -db n1_data_ops_challenge.db [-v]
+```
+There are 3 arguments for `singular-ingestion.py` - please do `python singular-ingestion.py -h` to see description on usage of those arguments. They include verbosity, referencing of `.db` file and enabling of overwriting existing data in `n1_data_ops_challenge.db`
