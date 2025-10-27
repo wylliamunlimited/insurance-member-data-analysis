@@ -130,4 +130,4 @@ A special note on this method is that, the ingestion pipeline requires path to 3
 It runs continuously until interrupted by keyboard termination. Every new data detection would trigger the following (not to be run manually):
 ```python ingestion.py -s path/to/data/file -b path/to/processed/directory -f path/to/failed/directory -db path/to/database/file [-v]```
 
-The pipeline is implemented with the same step as `singular-ingestion.py` with conditioal file handling.
+The pipeline is implemented with the same step as `singular-ingestion.py` with conditional file handling.
